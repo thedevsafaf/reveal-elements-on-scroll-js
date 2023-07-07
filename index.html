@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing the elements on scroll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <section id="section-one">
+        <div class="wrapper">
+            <h2 class="main-title">Need for Speed Most Wanted (2024)</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="img (1).jpg" alt="image1">
+                </div>
+                <div class="text-container">
+                    <h3>Get Need for Speed™ Most Wanted</h3>
+                    <p>The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It’s all about you, your friends, and a wild selection of cars. Let’s see what you can do.</p>
+                </div>
+            </div>
+            <div class="icons-container">
+                <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="section-two">
+        <div class="wrapper">
+            <h2 class="title">System requirements</h2>
+            <div class="content">
+                <div class="plain-text-container">
+                    <h3>Windows recommended requirements</h3>
+                    <p>OS: Windows 11<br> (Service Pack 6 and all available windows updates) 64-bit<br>Processor: Octa-Core CPU<br>Memory: 16 GB<br>Hard Drive: 48 GB<br>Graphics Card: DirectX 15 compatible with 4096 MB RAM <br>(NVIDIA GEFORCE GTX 560 or ATI RADEON 6950)<br>Sound Card: DirectX compatible<br>Keyboard and Mouse</p>
+                </div>
+                <div class="image-container">
+                    <img src="img (2).jpg" alt="image2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-three">
+        <div class="wrapper">
+            <h2 class="title">Showing elements on scroll</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="img (3).jpg" alt="image3"> 
+                </div>
+                <div class="icons-container">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- script for reveal elements -->
+    <script>
+        //common reveal options to create reveal animations
+        ScrollReveal({
+          reset: true,
+          distance: '60px',
+          duration: 2500,
+          delay: 400
+        });
+  
+        //target elements, and specify options to create reveal animations
+        ScrollReveal().reveal('.main-title, .title', { delay: 300, origin: 'left' });
+        ScrollReveal().reveal('#section-one .image-container', { delay: 400, origin: 'bottom' });
+        ScrollReveal().reveal('#section-one .text-container', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('#section-two .image-container', { delay: 400, origin: 'top' });
+        ScrollReveal().reveal('#section-two .plain-text-container', { delay: 500, origin: 'right' });
+        ScrollReveal().reveal('.icons-container i', { delay: 400, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.icons-container li', { delay: 500, origin: 'left', interval: 200 });
+      </script>
+
+
+</body>
+</html>
